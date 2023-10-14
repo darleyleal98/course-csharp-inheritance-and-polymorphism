@@ -17,14 +17,10 @@ namespace curso_heranca_e_polimorfismo.Entities
             Holder = holder;
             Balance = balance;
         }
-        public void Withdraw(double amount)
-        {
-            Balance -= amount;
-        }
-        public void Deposit(double amount)
-        {
-            Balance += amount;
-        }
+        // O virtual indica que o método pode ser sobrescrito
+        public virtual void Withdraw(double amount) => Balance -= amount + 5.0;
+        public void Deposit(double amount) => Balance += amount;
+
         public override string ToString()
         {
             StringBuilder stringBuilder = new StringBuilder();

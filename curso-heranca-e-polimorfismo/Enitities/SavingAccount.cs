@@ -1,11 +1,10 @@
-﻿using curso_heranca_e_polimorfismo.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace curso_heranca_e_polimorfismo.Enitities
+namespace curso_heranca_e_polimorfismo.Entities
 {
     public class SavingAccount : Account
     {
@@ -18,5 +17,12 @@ namespace curso_heranca_e_polimorfismo.Enitities
             InterestRate = interestRate;
         }
         public void UpdateBalance() => Balance += Balance * InterestRate;
+
+        //Sobreposição do método:
+        public override void Withdraw(double amount)
+        {
+            base.Withdraw(amount);
+            Balance -= 2.0;
+        }
     }
 }
