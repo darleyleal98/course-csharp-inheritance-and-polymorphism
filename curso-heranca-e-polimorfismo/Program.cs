@@ -11,7 +11,7 @@ namespace Course
             BusinessAccount businessAccount = new BusinessAccount(1002, "Maria", 0.0, 500);
 
             // Upcasting
-
+           
             Account account2 = businessAccount;
 
             Console.WriteLine(account);
@@ -37,7 +37,7 @@ namespace Course
             {
                 try
                 {
-                    BusinessAccount account5 = (BusinessAccount)account6; // Geraria uma exceção
+                    // BusinessAccount account5 = (BusinessAccount)account6; // Geraria uma exceção
 
                 }
                 catch
