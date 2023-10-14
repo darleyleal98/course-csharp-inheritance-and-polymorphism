@@ -1,19 +1,22 @@
-﻿using System;
+﻿using curso_heranca_e_polimorfismo.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace curso_heranca_e_polimorfismo.Entities
+namespace curso_heranca_e_polimorfismo.Enitities
 {
     public class SavingAccount : Account
     {
-        protected double InterestRate {  get; set; }
+        public double InterestRate { get; set; }
+
         public SavingAccount() { }
-        public SavingAccount(int number, string holder, double balance, double InterestRate) 
+        public SavingAccount(int number, string holder, double balance, double interestRate)
                              : base(number, holder, balance)
         {
-            InterestRate = InterestRate;
+            InterestRate = interestRate;
         }
-        public void UpdateBalance()
-        {
-            Balance += Balance * InterestRate;
-        }
+        public void UpdateBalance() => Balance += Balance * InterestRate;
     }
 }

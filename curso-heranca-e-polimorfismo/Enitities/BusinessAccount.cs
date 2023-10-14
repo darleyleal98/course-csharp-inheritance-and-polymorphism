@@ -1,8 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
-using curso_heranca_e_polimorfismo;
-using curso_heranca_e_polimorfismo.Entities;
-
 
 namespace curso_heranca_e_polimorfismo.Entities
 {
