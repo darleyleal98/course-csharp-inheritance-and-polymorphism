@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace curso_heranca_e_polimorfismo.Entities
 {
-    public class SavingAccount : Account
+    public sealed class SavingAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -18,8 +18,8 @@ namespace curso_heranca_e_polimorfismo.Entities
         }
         public void UpdateBalance() => Balance += Balance * InterestRate;
 
-        //Sobreposição do método:
-        public override void Withdraw(double amount)
+        //Sobreposição do método, sealed indica que esse método não poderá ser sobrescrito
+        public sealed override void Withdraw(double amount)
         {
             base.Withdraw(amount);
             Balance -= 2.0;
